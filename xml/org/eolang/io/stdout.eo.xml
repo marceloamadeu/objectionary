@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program ms="0"
+         name="org/eolang/io/stdout.eo"
+         time="2021-02-12T08:12:12.994317Z"
+         version="1.0-SNAPSHOT">
+   <listing>+package org.eolang.io
+
+[text] &gt; stdout /bool
+&lt;EOF&gt;</listing>
+   <errors/>
+   <sheets>
+      <sheet>not-empty-atoms</sheet>
+      <sheet>middle-varargs</sheet>
+      <sheet>duplicate-names</sheet>
+      <sheet>many-free-attributes</sheet>
+      <sheet>broken-aliases</sheet>
+      <sheet>duplicate-aliases</sheet>
+      <sheet>one-body</sheet>
+      <sheet>same-line-names</sheet>
+      <sheet>self-naming</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>wrap-method-calls</sheet>
+      <sheet>vars-float-up</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>add-default-package</sheet>
+      <sheet>broken-refs</sheet>
+      <sheet>unknown-names</sheet>
+      <sheet>noname-attributes</sheet>
+      <sheet>globals-to-abstracts</sheet>
+      <sheet>remove-refs</sheet>
+      <sheet>abstracts-float-up</sheet>
+      <sheet>remove-levels</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>fix-missed-names</sheet>
+      <sheet>broken-refs</sheet>
+   </sheets>
+   <metas>
+      <meta line="1">
+         <head>package</head>
+         <tail>org.eolang.io</tail>
+         <part>org.eolang.io</part>
+      </meta>
+   </metas>
+   <objects>
+      <o atom="bool" line="3" name="stdout" original-name="stdout">
+         <o line="3" name="text"/>
+      </o>
+   </objects>
+</program>

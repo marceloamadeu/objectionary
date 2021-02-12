@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program ms="179"
+         name="org/eolang/array.eo"
+         time="2021-02-12T04:53:03.111731Z"
+         version="1.0-SNAPSHOT">
+   <listing>+package org.eolang
+
+[] &gt; array
+
+  # Obtain the length of the array.
+  [] &gt; length /int
+
+  # Take one element from the array, at the
+  # given position.
+  [i] &gt; get /object
+
+  # Create a new array with this element added to
+  # the end of it.
+  [x] &gt; append /array
+
+  # Reduce from start "a" using the function "f"
+  [a f] &gt; reduce /a
+
+  # Map with index. Here "f" must be an abstract
+  # object with two free attributes. The first
+  # one for the element of the array, the second one
+  # for the index.
+  [f] &gt; mapi /array
+
+  # Map without index. Here "f" must be an abstract
+  # object with one free attribute, for the element
+  # of the array.
+  [f] &gt; map
+    ^.mapi &gt; @
+      [x i]
+        ^.f x &gt; @
+&lt;EOF&gt;</listing>
+   <errors/>
+   <sheets>
+      <sheet>not-empty-atoms</sheet>
+      <sheet>middle-varargs</sheet>
+      <sheet>duplicate-names</sheet>
+      <sheet>many-free-attributes</sheet>
+      <sheet>broken-aliases</sheet>
+      <sheet>duplicate-aliases</sheet>
+      <sheet>one-body</sheet>
+      <sheet>same-line-names</sheet>
+      <sheet>self-naming</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>wrap-method-calls</sheet>
+      <sheet>vars-float-up</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>add-default-package</sheet>
+      <sheet>broken-refs</sheet>
+      <sheet>unknown-names</sheet>
+      <sheet>noname-attributes</sheet>
+      <sheet>globals-to-abstracts</sheet>
+      <sheet>remove-refs</sheet>
+      <sheet>abstracts-float-up</sheet>
+      <sheet>remove-levels</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>fix-missed-names</sheet>
+      <sheet>broken-refs</sheet>
+   </sheets>
+   <metas>
+      <meta line="1">
+         <head>package</head>
+         <tail>org.eolang</tail>
+      </meta>
+   </metas>
+   <objects>
+      <o line="3" name="array" original-name="array">
+         <o atom="int"
+            base="array$length"
+            cut="0"
+            line="5"
+            name="length"
+            ref="5">
+            <o as="get" base="get" level="1" ref="8"/>
+            <o as="append" base="append" level="1" ref="12"/>
+            <o as="reduce" base="reduce" level="1" ref="16"/>
+            <o as="mapi" base="mapi" level="1" ref="19"/>
+            <o as="map" base="map" level="1" ref="25"/>
+         </o>
+         <o atom="object"
+            base="array$get"
+            cut="1"
+            line="8"
+            name="get"
+            ref="8">
+            <o as="length" base="length" level="1" ref="5"/>
+            <o as="append" base="append" level="1" ref="12"/>
+            <o as="reduce" base="reduce" level="1" ref="16"/>
+            <o as="mapi" base="mapi" level="1" ref="19"/>
+            <o as="map" base="map" level="1" ref="25"/>
+         </o>
+         <o atom="array"
+            base="array$append"
+            cut="3"
+            line="12"
+            name="append"
+            ref="12">
+            <o as="length" base="length" level="1" ref="5"/>
+            <o as="get" base="get" level="1" ref="8"/>
+            <o as="reduce" base="reduce" level="1" ref="16"/>
+            <o as="mapi" base="mapi" level="1" ref="19"/>
+            <o as="map" base="map" level="1" ref="25"/>
+         </o>
+         <o atom="a"
+            base="array$reduce"
+            cut="5"
+            line="16"
+            name="reduce"
+            ref="16">
+            <o as="length" base="length" level="1" ref="5"/>
+            <o as="get" base="get" level="1" ref="8"/>
+            <o as="append" base="append" level="1" ref="12"/>
+            <o as="mapi" base="mapi" level="1" ref="19"/>
+            <o as="map" base="map" level="1" ref="25"/>
+         </o>
+         <o atom="array"
+            base="array$mapi"
+            cut="8"
+            line="19"
+            name="mapi"
+            ref="19">
+            <o as="length" base="length" level="1" ref="5"/>
+            <o as="get" base="get" level="1" ref="8"/>
+            <o as="append" base="append" level="1" ref="12"/>
+            <o as="reduce" base="reduce" level="1" ref="16"/>
+            <o as="map" base="map" level="1" ref="25"/>
+         </o>
+         <o base="array$map" cut="10" line="25" name="map" ref="25">
+            <o as="length" base="length" level="1" ref="5"/>
+            <o as="get" base="get" level="1" ref="8"/>
+            <o as="append" base="append" level="1" ref="12"/>
+            <o as="reduce" base="reduce" level="1" ref="16"/>
+            <o as="mapi" base="mapi" level="1" ref="19"/>
+         </o>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="5"
+         name="array$length"
+         original-name="length"
+         parent="array">
+         <o level="1" line="5.8" name="get"/>
+         <o level="1" line="5.12" name="append"/>
+         <o level="1" line="5.16" name="reduce"/>
+         <o level="1" line="5.19" name="mapi"/>
+         <o level="1" line="5.25" name="map"/>
+      </o>
+      <o ancestors="1"
+         atom="object"
+         line="8"
+         name="array$get"
+         original-name="get"
+         parent="array">
+         <o line="10" name="i"/>
+         <o level="1" line="8.5" name="length"/>
+         <o level="1" line="8.12" name="append"/>
+         <o level="1" line="8.16" name="reduce"/>
+         <o level="1" line="8.19" name="mapi"/>
+         <o level="1" line="8.25" name="map"/>
+      </o>
+      <o ancestors="1"
+         atom="array"
+         line="12"
+         name="array$append"
+         original-name="append"
+         parent="array">
+         <o line="14" name="x"/>
+         <o level="1" line="12.5" name="length"/>
+         <o level="1" line="12.8" name="get"/>
+         <o level="1" line="12.16" name="reduce"/>
+         <o level="1" line="12.19" name="mapi"/>
+         <o level="1" line="12.25" name="map"/>
+      </o>
+      <o ancestors="1"
+         atom="a"
+         line="16"
+         name="array$reduce"
+         original-name="reduce"
+         parent="array">
+         <o line="17" name="a"/>
+         <o line="17" name="f"/>
+         <o level="1" line="16.5" name="length"/>
+         <o level="1" line="16.8" name="get"/>
+         <o level="1" line="16.12" name="append"/>
+         <o level="1" line="16.19" name="mapi"/>
+         <o level="1" line="16.25" name="map"/>
+      </o>
+      <o ancestors="1"
+         atom="array"
+         line="19"
+         name="array$mapi"
+         original-name="mapi"
+         parent="array">
+         <o line="23" name="f"/>
+         <o level="1" line="19.5" name="length"/>
+         <o level="1" line="19.8" name="get"/>
+         <o level="1" line="19.12" name="append"/>
+         <o level="1" line="19.16" name="reduce"/>
+         <o level="1" line="19.25" name="map"/>
+      </o>
+      <o ancestors="1"
+         line="25"
+         name="array$map"
+         original-name="map"
+         parent="array">
+         <o line="28" name="f"/>
+         <o base=".mapi" line="29" method="" name="@">
+            <o base="^" line="29"/>
+            <o base="array$map$1$" cut="12" line="30" ref="30">
+               <o as="f" base="f" level="1" ref="28"/>
+               <o as="length" base="length" level="2" ref="25.5"/>
+               <o as="get" base="get" level="2" ref="25.8"/>
+               <o as="append" base="append" level="2" ref="25.12"/>
+               <o as="reduce" base="reduce" level="2" ref="25.16"/>
+               <o as="mapi" base="mapi" level="2" ref="25.19"/>
+            </o>
+         </o>
+         <o level="1" line="25.5" name="length"/>
+         <o level="1" line="25.8" name="get"/>
+         <o level="1" line="25.12" name="append"/>
+         <o level="1" line="25.16" name="reduce"/>
+         <o level="1" line="25.19" name="mapi"/>
+      </o>
+      <o ancestors="2"
+         line="30"
+         name="array$map$1$"
+         original-name=""
+         parent="array">
+         <o line="30" name="x"/>
+         <o line="30" name="i"/>
+         <o base=".f" line="31" method="" name="@">
+            <o base="^" line="31"/>
+            <o base="x" line="31" ref="30"/>
+         </o>
+         <o level="1" line="30.28" name="f"/>
+         <o level="2" line="30.5" name="length"/>
+         <o level="2" line="30.8" name="get"/>
+         <o level="2" line="30.12" name="append"/>
+         <o level="2" line="30.16" name="reduce"/>
+         <o level="2" line="30.19" name="mapi"/>
+      </o>
+   </objects>
+</program>

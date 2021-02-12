@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program ms="2"
+         name="org/eolang/bool.eo"
+         time="2021-02-12T04:53:03.492285Z"
+         version="1.0-SNAPSHOT">
+   <listing>+package org.eolang
+
+[] &gt; bool
+  # If true, return "t", otherwise "f"
+  [t f] &gt; if /t
+
+  # NOT
+  [] &gt; not /bool
+
+  # AND
+  [x...] &gt; and /bool
+
+  # OR
+  [x...] &gt; or /bool
+
+  # While this is true copies the object
+  # with "i" as the position of the cycle. The result
+  # of WHILE is the number of successful cycles.
+  [f] &gt; while /int
+&lt;EOF&gt;</listing>
+   <errors/>
+   <sheets>
+      <sheet>not-empty-atoms</sheet>
+      <sheet>middle-varargs</sheet>
+      <sheet>duplicate-names</sheet>
+      <sheet>many-free-attributes</sheet>
+      <sheet>broken-aliases</sheet>
+      <sheet>duplicate-aliases</sheet>
+      <sheet>one-body</sheet>
+      <sheet>same-line-names</sheet>
+      <sheet>self-naming</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>wrap-method-calls</sheet>
+      <sheet>vars-float-up</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>add-default-package</sheet>
+      <sheet>broken-refs</sheet>
+      <sheet>unknown-names</sheet>
+      <sheet>noname-attributes</sheet>
+      <sheet>globals-to-abstracts</sheet>
+      <sheet>remove-refs</sheet>
+      <sheet>abstracts-float-up</sheet>
+      <sheet>remove-levels</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>fix-missed-names</sheet>
+      <sheet>broken-refs</sheet>
+   </sheets>
+   <metas>
+      <meta line="1">
+         <head>package</head>
+         <tail>org.eolang</tail>
+      </meta>
+   </metas>
+   <objects>
+      <o line="3" name="bool" original-name="bool">
+         <o atom="t"
+            base="bool$if"
+            cut="0"
+            line="4"
+            name="if"
+            ref="4">
+            <o as="not" base="not" level="1" ref="7"/>
+            <o as="and" base="and" level="1" ref="10"/>
+            <o as="or" base="or" level="1" ref="13"/>
+            <o as="while" base="while" level="1" ref="16"/>
+         </o>
+         <o atom="bool"
+            base="bool$not"
+            cut="3"
+            line="7"
+            name="not"
+            ref="7">
+            <o as="if" base="if" level="1" ref="4"/>
+            <o as="and" base="and" level="1" ref="10"/>
+            <o as="or" base="or" level="1" ref="13"/>
+            <o as="while" base="while" level="1" ref="16"/>
+         </o>
+         <o atom="bool"
+            base="bool$and"
+            cut="4"
+            line="10"
+            name="and"
+            ref="10">
+            <o as="if" base="if" level="1" ref="4"/>
+            <o as="not" base="not" level="1" ref="7"/>
+            <o as="or" base="or" level="1" ref="13"/>
+            <o as="while" base="while" level="1" ref="16"/>
+         </o>
+         <o atom="bool"
+            base="bool$or"
+            cut="6"
+            line="13"
+            name="or"
+            ref="13">
+            <o as="if" base="if" level="1" ref="4"/>
+            <o as="not" base="not" level="1" ref="7"/>
+            <o as="and" base="and" level="1" ref="10"/>
+            <o as="while" base="while" level="1" ref="16"/>
+         </o>
+         <o atom="int"
+            base="bool$while"
+            cut="8"
+            line="16"
+            name="while"
+            ref="16">
+            <o as="if" base="if" level="1" ref="4"/>
+            <o as="not" base="not" level="1" ref="7"/>
+            <o as="and" base="and" level="1" ref="10"/>
+            <o as="or" base="or" level="1" ref="13"/>
+         </o>
+      </o>
+      <o ancestors="1"
+         atom="t"
+         line="4"
+         name="bool$if"
+         original-name="if"
+         parent="bool">
+         <o line="5" name="t"/>
+         <o line="5" name="f"/>
+         <o level="1" line="4.7" name="not"/>
+         <o level="1" line="4.10" name="and"/>
+         <o level="1" line="4.13" name="or"/>
+         <o level="1" line="4.16" name="while"/>
+      </o>
+      <o ancestors="1"
+         atom="bool"
+         line="7"
+         name="bool$not"
+         original-name="not"
+         parent="bool">
+         <o level="1" line="7.4" name="if"/>
+         <o level="1" line="7.10" name="and"/>
+         <o level="1" line="7.13" name="or"/>
+         <o level="1" line="7.16" name="while"/>
+      </o>
+      <o ancestors="1"
+         atom="bool"
+         line="10"
+         name="bool$and"
+         original-name="and"
+         parent="bool">
+         <o line="11" name="x" vararg=""/>
+         <o level="1" line="10.4" name="if"/>
+         <o level="1" line="10.7" name="not"/>
+         <o level="1" line="10.13" name="or"/>
+         <o level="1" line="10.16" name="while"/>
+      </o>
+      <o ancestors="1"
+         atom="bool"
+         line="13"
+         name="bool$or"
+         original-name="or"
+         parent="bool">
+         <o line="14" name="x" vararg=""/>
+         <o level="1" line="13.4" name="if"/>
+         <o level="1" line="13.7" name="not"/>
+         <o level="1" line="13.10" name="and"/>
+         <o level="1" line="13.16" name="while"/>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="16"
+         name="bool$while"
+         original-name="while"
+         parent="bool">
+         <o line="19" name="f"/>
+         <o level="1" line="16.4" name="if"/>
+         <o level="1" line="16.7" name="not"/>
+         <o level="1" line="16.10" name="and"/>
+         <o level="1" line="16.13" name="or"/>
+      </o>
+   </objects>
+</program>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program ms="7"
+         name="org/eolang/int.eo"
+         time="2021-02-12T04:53:03.468097Z"
+         version="1.0-SNAPSHOT">
+   <listing>+package org.eolang
+
+[] &gt; int
+  # Equals to another number
+  [x] &gt; eq /bool
+
+  # Change the sign of the number
+  [] &gt; neg /int
+
+  # Add to the current one
+  [x] &gt; add /int
+
+  # Subtract from the current one
+  [x] &gt; sub
+    ^.add (x.neg) &gt; @
+
+  # Multiply this one by another int
+  [x] &gt; mul /int
+
+  # Divide this one by another int
+  [x] &gt; div /int
+
+  # Calculate MOD
+  [x] &gt; mod /int
+
+  # Make it power x
+  [x] &gt; pow /int
+
+  # It is less than the argument provided?
+  [x] &gt; less /bool
+&lt;EOF&gt;</listing>
+   <errors/>
+   <sheets>
+      <sheet>not-empty-atoms</sheet>
+      <sheet>middle-varargs</sheet>
+      <sheet>duplicate-names</sheet>
+      <sheet>many-free-attributes</sheet>
+      <sheet>broken-aliases</sheet>
+      <sheet>duplicate-aliases</sheet>
+      <sheet>one-body</sheet>
+      <sheet>same-line-names</sheet>
+      <sheet>self-naming</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>wrap-method-calls</sheet>
+      <sheet>vars-float-up</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>add-default-package</sheet>
+      <sheet>broken-refs</sheet>
+      <sheet>unknown-names</sheet>
+      <sheet>noname-attributes</sheet>
+      <sheet>globals-to-abstracts</sheet>
+      <sheet>remove-refs</sheet>
+      <sheet>abstracts-float-up</sheet>
+      <sheet>remove-levels</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>fix-missed-names</sheet>
+      <sheet>broken-refs</sheet>
+   </sheets>
+   <metas>
+      <meta line="1">
+         <head>package</head>
+         <tail>org.eolang</tail>
+      </meta>
+   </metas>
+   <objects>
+      <o line="3" name="int" original-name="int">
+         <o atom="bool"
+            base="int$eq"
+            cut="0"
+            line="4"
+            name="eq"
+            ref="4">
+            <o as="neg" base="neg" level="1" ref="7"/>
+            <o as="add" base="add" level="1" ref="10"/>
+            <o as="sub" base="sub" level="1" ref="13"/>
+            <o as="mul" base="mul" level="1" ref="17"/>
+            <o as="div" base="div" level="1" ref="20"/>
+            <o as="mod" base="mod" level="1" ref="23"/>
+            <o as="pow" base="pow" level="1" ref="26"/>
+            <o as="less" base="less" level="1" ref="29"/>
+         </o>
+         <o atom="int"
+            base="int$neg"
+            cut="2"
+            line="7"
+            name="neg"
+            ref="7">
+            <o as="eq" base="eq" level="1" ref="4"/>
+            <o as="add" base="add" level="1" ref="10"/>
+            <o as="sub" base="sub" level="1" ref="13"/>
+            <o as="mul" base="mul" level="1" ref="17"/>
+            <o as="div" base="div" level="1" ref="20"/>
+            <o as="mod" base="mod" level="1" ref="23"/>
+            <o as="pow" base="pow" level="1" ref="26"/>
+            <o as="less" base="less" level="1" ref="29"/>
+         </o>
+         <o atom="int"
+            base="int$add"
+            cut="3"
+            line="10"
+            name="add"
+            ref="10">
+            <o as="eq" base="eq" level="1" ref="4"/>
+            <o as="neg" base="neg" level="1" ref="7"/>
+            <o as="sub" base="sub" level="1" ref="13"/>
+            <o as="mul" base="mul" level="1" ref="17"/>
+            <o as="div" base="div" level="1" ref="20"/>
+            <o as="mod" base="mod" level="1" ref="23"/>
+            <o as="pow" base="pow" level="1" ref="26"/>
+            <o as="less" base="less" level="1" ref="29"/>
+         </o>
+         <o base="int$sub" cut="5" line="13" name="sub" ref="13">
+            <o as="eq" base="eq" level="1" ref="4"/>
+            <o as="neg" base="neg" level="1" ref="7"/>
+            <o as="add" base="add" level="1" ref="10"/>
+            <o as="mul" base="mul" level="1" ref="17"/>
+            <o as="div" base="div" level="1" ref="20"/>
+            <o as="mod" base="mod" level="1" ref="23"/>
+            <o as="pow" base="pow" level="1" ref="26"/>
+            <o as="less" base="less" level="1" ref="29"/>
+         </o>
+         <o atom="int"
+            base="int$mul"
+            cut="11"
+            line="17"
+            name="mul"
+            ref="17">
+            <o as="eq" base="eq" level="1" ref="4"/>
+            <o as="neg" base="neg" level="1" ref="7"/>
+            <o as="add" base="add" level="1" ref="10"/>
+            <o as="sub" base="sub" level="1" ref="13"/>
+            <o as="div" base="div" level="1" ref="20"/>
+            <o as="mod" base="mod" level="1" ref="23"/>
+            <o as="pow" base="pow" level="1" ref="26"/>
+            <o as="less" base="less" level="1" ref="29"/>
+         </o>
+         <o atom="int"
+            base="int$div"
+            cut="13"
+            line="20"
+            name="div"
+            ref="20">
+            <o as="eq" base="eq" level="1" ref="4"/>
+            <o as="neg" base="neg" level="1" ref="7"/>
+            <o as="add" base="add" level="1" ref="10"/>
+            <o as="sub" base="sub" level="1" ref="13"/>
+            <o as="mul" base="mul" level="1" ref="17"/>
+            <o as="mod" base="mod" level="1" ref="23"/>
+            <o as="pow" base="pow" level="1" ref="26"/>
+            <o as="less" base="less" level="1" ref="29"/>
+         </o>
+         <o atom="int"
+            base="int$mod"
+            cut="15"
+            line="23"
+            name="mod"
+            ref="23">
+            <o as="eq" base="eq" level="1" ref="4"/>
+            <o as="neg" base="neg" level="1" ref="7"/>
+            <o as="add" base="add" level="1" ref="10"/>
+            <o as="sub" base="sub" level="1" ref="13"/>
+            <o as="mul" base="mul" level="1" ref="17"/>
+            <o as="div" base="div" level="1" ref="20"/>
+            <o as="pow" base="pow" level="1" ref="26"/>
+            <o as="less" base="less" level="1" ref="29"/>
+         </o>
+         <o atom="int"
+            base="int$pow"
+            cut="17"
+            line="26"
+            name="pow"
+            ref="26">
+            <o as="eq" base="eq" level="1" ref="4"/>
+            <o as="neg" base="neg" level="1" ref="7"/>
+            <o as="add" base="add" level="1" ref="10"/>
+            <o as="sub" base="sub" level="1" ref="13"/>
+            <o as="mul" base="mul" level="1" ref="17"/>
+            <o as="div" base="div" level="1" ref="20"/>
+            <o as="mod" base="mod" level="1" ref="23"/>
+            <o as="less" base="less" level="1" ref="29"/>
+         </o>
+         <o atom="bool"
+            base="int$less"
+            cut="19"
+            line="29"
+            name="less"
+            ref="29">
+            <o as="eq" base="eq" level="1" ref="4"/>
+            <o as="neg" base="neg" level="1" ref="7"/>
+            <o as="add" base="add" level="1" ref="10"/>
+            <o as="sub" base="sub" level="1" ref="13"/>
+            <o as="mul" base="mul" level="1" ref="17"/>
+            <o as="div" base="div" level="1" ref="20"/>
+            <o as="mod" base="mod" level="1" ref="23"/>
+            <o as="pow" base="pow" level="1" ref="26"/>
+         </o>
+      </o>
+      <o ancestors="1"
+         atom="bool"
+         line="4"
+         name="int$eq"
+         original-name="eq"
+         parent="int">
+         <o line="5" name="x"/>
+         <o level="1" line="4.7" name="neg"/>
+         <o level="1" line="4.10" name="add"/>
+         <o level="1" line="4.13" name="sub"/>
+         <o level="1" line="4.17" name="mul"/>
+         <o level="1" line="4.20" name="div"/>
+         <o level="1" line="4.23" name="mod"/>
+         <o level="1" line="4.26" name="pow"/>
+         <o level="1" line="4.29" name="less"/>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="7"
+         name="int$neg"
+         original-name="neg"
+         parent="int">
+         <o level="1" line="7.4" name="eq"/>
+         <o level="1" line="7.10" name="add"/>
+         <o level="1" line="7.13" name="sub"/>
+         <o level="1" line="7.17" name="mul"/>
+         <o level="1" line="7.20" name="div"/>
+         <o level="1" line="7.23" name="mod"/>
+         <o level="1" line="7.26" name="pow"/>
+         <o level="1" line="7.29" name="less"/>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="10"
+         name="int$add"
+         original-name="add"
+         parent="int">
+         <o line="11" name="x"/>
+         <o level="1" line="10.4" name="eq"/>
+         <o level="1" line="10.7" name="neg"/>
+         <o level="1" line="10.13" name="sub"/>
+         <o level="1" line="10.17" name="mul"/>
+         <o level="1" line="10.20" name="div"/>
+         <o level="1" line="10.23" name="mod"/>
+         <o level="1" line="10.26" name="pow"/>
+         <o level="1" line="10.29" name="less"/>
+      </o>
+      <o ancestors="1"
+         line="13"
+         name="int$sub"
+         original-name="sub"
+         parent="int">
+         <o line="14" name="x"/>
+         <o base=".add" line="15" method="" name="@">
+            <o base="^" line="15"/>
+            <o base=".neg" line="15" method="">
+               <o base="x" line="15" ref="14"/>
+            </o>
+         </o>
+         <o level="1" line="13.4" name="eq"/>
+         <o level="1" line="13.7" name="neg"/>
+         <o level="1" line="13.10" name="add"/>
+         <o level="1" line="13.17" name="mul"/>
+         <o level="1" line="13.20" name="div"/>
+         <o level="1" line="13.23" name="mod"/>
+         <o level="1" line="13.26" name="pow"/>
+         <o level="1" line="13.29" name="less"/>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="17"
+         name="int$mul"
+         original-name="mul"
+         parent="int">
+         <o line="18" name="x"/>
+         <o level="1" line="17.4" name="eq"/>
+         <o level="1" line="17.7" name="neg"/>
+         <o level="1" line="17.10" name="add"/>
+         <o level="1" line="17.13" name="sub"/>
+         <o level="1" line="17.20" name="div"/>
+         <o level="1" line="17.23" name="mod"/>
+         <o level="1" line="17.26" name="pow"/>
+         <o level="1" line="17.29" name="less"/>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="20"
+         name="int$div"
+         original-name="div"
+         parent="int">
+         <o line="21" name="x"/>
+         <o level="1" line="20.4" name="eq"/>
+         <o level="1" line="20.7" name="neg"/>
+         <o level="1" line="20.10" name="add"/>
+         <o level="1" line="20.13" name="sub"/>
+         <o level="1" line="20.17" name="mul"/>
+         <o level="1" line="20.23" name="mod"/>
+         <o level="1" line="20.26" name="pow"/>
+         <o level="1" line="20.29" name="less"/>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="23"
+         name="int$mod"
+         original-name="mod"
+         parent="int">
+         <o line="24" name="x"/>
+         <o level="1" line="23.4" name="eq"/>
+         <o level="1" line="23.7" name="neg"/>
+         <o level="1" line="23.10" name="add"/>
+         <o level="1" line="23.13" name="sub"/>
+         <o level="1" line="23.17" name="mul"/>
+         <o level="1" line="23.20" name="div"/>
+         <o level="1" line="23.26" name="pow"/>
+         <o level="1" line="23.29" name="less"/>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="26"
+         name="int$pow"
+         original-name="pow"
+         parent="int">
+         <o line="27" name="x"/>
+         <o level="1" line="26.4" name="eq"/>
+         <o level="1" line="26.7" name="neg"/>
+         <o level="1" line="26.10" name="add"/>
+         <o level="1" line="26.13" name="sub"/>
+         <o level="1" line="26.17" name="mul"/>
+         <o level="1" line="26.20" name="div"/>
+         <o level="1" line="26.23" name="mod"/>
+         <o level="1" line="26.29" name="less"/>
+      </o>
+      <o ancestors="1"
+         atom="bool"
+         line="29"
+         name="int$less"
+         original-name="less"
+         parent="int">
+         <o line="30" name="x"/>
+         <o level="1" line="29.4" name="eq"/>
+         <o level="1" line="29.7" name="neg"/>
+         <o level="1" line="29.10" name="add"/>
+         <o level="1" line="29.13" name="sub"/>
+         <o level="1" line="29.17" name="mul"/>
+         <o level="1" line="29.20" name="div"/>
+         <o level="1" line="29.23" name="mod"/>
+         <o level="1" line="29.26" name="pow"/>
+      </o>
+   </objects>
+</program>

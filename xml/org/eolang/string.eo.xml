@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<program ms="2"
+         name="org/eolang/string.eo"
+         time="2021-02-12T04:53:03.455966Z"
+         version="1.0-SNAPSHOT">
+   <listing>+package org.eolang
+
+[] &gt; string
+  # Trim it from both sides
+  [] &gt; trim /string
+
+  # Make an integer out of this string
+  [] &gt; toInt /int
+
+  # Is true if both strings are equal
+  [x] &gt; eq /bool
+
+&lt;EOF&gt;</listing>
+   <errors/>
+   <sheets>
+      <sheet>not-empty-atoms</sheet>
+      <sheet>middle-varargs</sheet>
+      <sheet>duplicate-names</sheet>
+      <sheet>many-free-attributes</sheet>
+      <sheet>broken-aliases</sheet>
+      <sheet>duplicate-aliases</sheet>
+      <sheet>one-body</sheet>
+      <sheet>same-line-names</sheet>
+      <sheet>self-naming</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>wrap-method-calls</sheet>
+      <sheet>vars-float-up</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>resolve-aliases</sheet>
+      <sheet>add-default-package</sheet>
+      <sheet>broken-refs</sheet>
+      <sheet>unknown-names</sheet>
+      <sheet>noname-attributes</sheet>
+      <sheet>globals-to-abstracts</sheet>
+      <sheet>remove-refs</sheet>
+      <sheet>abstracts-float-up</sheet>
+      <sheet>remove-levels</sheet>
+      <sheet>add-refs</sheet>
+      <sheet>fix-missed-names</sheet>
+      <sheet>broken-refs</sheet>
+   </sheets>
+   <metas>
+      <meta line="1">
+         <head>package</head>
+         <tail>org.eolang</tail>
+      </meta>
+   </metas>
+   <objects>
+      <o line="3" name="string" original-name="string">
+         <o atom="string"
+            base="string$trim"
+            cut="0"
+            line="4"
+            name="trim"
+            ref="4">
+            <o as="toInt" base="toInt" level="1" ref="7"/>
+            <o as="eq" base="eq" level="1" ref="10"/>
+         </o>
+         <o atom="int"
+            base="string$toInt"
+            cut="1"
+            line="7"
+            name="toInt"
+            ref="7">
+            <o as="trim" base="trim" level="1" ref="4"/>
+            <o as="eq" base="eq" level="1" ref="10"/>
+         </o>
+         <o atom="bool"
+            base="string$eq"
+            cut="2"
+            line="10"
+            name="eq"
+            ref="10">
+            <o as="trim" base="trim" level="1" ref="4"/>
+            <o as="toInt" base="toInt" level="1" ref="7"/>
+         </o>
+      </o>
+      <o ancestors="1"
+         atom="string"
+         line="4"
+         name="string$trim"
+         original-name="trim"
+         parent="string">
+         <o level="1" line="4.7" name="toInt"/>
+         <o level="1" line="4.10" name="eq"/>
+      </o>
+      <o ancestors="1"
+         atom="int"
+         line="7"
+         name="string$toInt"
+         original-name="toInt"
+         parent="string">
+         <o level="1" line="7.4" name="trim"/>
+         <o level="1" line="7.10" name="eq"/>
+      </o>
+      <o ancestors="1"
+         atom="bool"
+         line="10"
+         name="string$eq"
+         original-name="eq"
+         parent="string">
+         <o line="11" name="x"/>
+         <o level="1" line="10.4" name="trim"/>
+         <o level="1" line="10.7" name="toInt"/>
+      </o>
+   </objects>
+</program>
