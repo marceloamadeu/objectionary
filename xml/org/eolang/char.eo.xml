@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<program ms="5"
+<program ms="7"
          name="org/eolang/char.eo"
-         time="2021-02-12T04:53:03.485369Z"
+         time="2021-02-12T08:18:40.313857Z"
          version="1.0-SNAPSHOT">
    <listing>+package org.eolang
++rt jvm org.eolang:eo-runtime:0.1.18
 +alias sprintf org.eolang.txt.sprintf
 
 [data] &gt; char
@@ -44,29 +45,42 @@
       <meta line="1">
          <head>package</head>
          <tail>org.eolang</tail>
+         <part>org.eolang</part>
+      </meta>
+      <meta line="2">
+         <head>rt</head>
+         <tail>jvm org.eolang:eo-runtime:0.1.18</tail>
+         <part>jvm</part>
+         <part>org.eolang:eo-runtime:0.1.18</part>
+      </meta>
+      <meta line="3">
+         <head>alias</head>
+         <tail>sprintf org.eolang.txt.sprintf</tail>
+         <part>sprintf</part>
+         <part>org.eolang.txt.sprintf</part>
       </meta>
    </metas>
    <objects>
-      <o line="4" name="char" original-name="char">
-         <o line="4" name="data"/>
+      <o line="5" name="char" original-name="char">
+         <o line="5" name="data"/>
          <o base="char$toString"
             cut="1"
-            line="5"
+            line="6"
             name="toString"
-            ref="5">
-            <o as="data" base="data" level="1" ref="4"/>
+            ref="6">
+            <o as="data" base="data" level="1" ref="5"/>
          </o>
       </o>
       <o ancestors="1"
-         line="5"
+         line="6"
          name="char$toString"
          original-name="toString"
          parent="char">
-         <o base="org.eolang.txt.sprintf" line="7" name="@">
-            <o base="org.eolang.string" data="string" line="7">%c</o>
-            <o base="^" line="7"/>
+         <o base="org.eolang.txt.sprintf" line="8" name="@">
+            <o base="org.eolang.string" data="string" line="8">%c</o>
+            <o base="^" line="8"/>
          </o>
-         <o level="1" line="5.4" name="data"/>
+         <o level="1" line="6.5" name="data"/>
       </o>
    </objects>
 </program>

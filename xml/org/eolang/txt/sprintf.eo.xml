@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <program ms="0"
          name="org/eolang/txt/sprintf.eo"
-         time="2021-02-12T08:12:12.987871Z"
+         time="2021-02-12T08:18:40.295232Z"
          version="1.0-SNAPSHOT">
    <listing>+package org.eolang.txt
++rt jvm org.eolang:eo-runtime:0.1.18
 
 [format args...] &gt; sprintf /string
 &lt;EOF&gt;</listing>
@@ -42,11 +43,17 @@
          <tail>org.eolang.txt</tail>
          <part>org.eolang.txt</part>
       </meta>
+      <meta line="2">
+         <head>rt</head>
+         <tail>jvm org.eolang:eo-runtime:0.1.18</tail>
+         <part>jvm</part>
+         <part>org.eolang:eo-runtime:0.1.18</part>
+      </meta>
    </metas>
    <objects>
-      <o atom="string" line="3" name="sprintf" original-name="sprintf">
-         <o line="3" name="format"/>
-         <o line="3" name="args" vararg=""/>
+      <o atom="string" line="4" name="sprintf" original-name="sprintf">
+         <o line="4" name="format"/>
+         <o line="4" name="args" vararg=""/>
       </o>
    </objects>
 </program>

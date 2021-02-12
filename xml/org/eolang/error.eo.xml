@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <program ms="0"
          name="org/eolang/error.eo"
-         time="2021-02-12T04:53:03.519797Z"
+         time="2021-02-12T08:18:40.354040Z"
          version="1.0-SNAPSHOT">
    <listing>+package org.eolang
 
@@ -40,6 +40,7 @@
       <meta line="1">
          <head>package</head>
          <tail>org.eolang</tail>
+         <part>org.eolang</part>
       </meta>
    </metas>
    <objects>
